@@ -1,52 +1,119 @@
-1. Admin Journey: Creating and Managing Events
-Admin Login
-The admin logs into the application using their credentials.
-Add Event
-The admin navigates to the "Create Event" page.
-Fills in event details (title, description, date, location, etc.).
-Submits the form to create a new event.
-The event is saved to the database and becomes visible in the admin’s dashboard.
-View Own Events
-The admin can view a list of all events they have created.
-Each event entry may include options to edit or delete the event.
+# 🎫 Event Management Application
 
-2. User Journey: Viewing and Booking Event Tickets
-Browse Events
-Any user (logged in or guest, depending on your app’s rules) can view the list of all available events.
-View Event Details
-The user clicks on an event to see more information (description, date, location, etc.).
-Book Ticket
-The user selects the number of tickets and proceeds to book.
-The booking is confirmed, and the user receives a confirmation (via email or on-screen).
+A full-stack Event Management platform where **admins** can create and manage events, and **users** can browse and book event tickets. Built with **Next.js**, **Express**, and **MongoDB**, this application provides a smooth experience for event organizers and attendees alike.
 
-Summary
-Admin: Can create and manage their own events.
-User: Can view all events and book tickets.
-.gitignore: Protects sensitive and unnecessary files from being committed to the repository, ensuring a secure and efficient development process.
+## Features
+
+###  Admin Journey – Create & Manage Events
+
+- **Sign Up / Login**
+  - Admins can securely register and log in to the platform.
+  - Authenticated sessions provide secure access to admin functionalities.
+
+- **Create Events**
+  - Admin can navigate to the "Create Event" page and enter:
+    - Event Title *(AI-enhanced input)*
+    - Description *(AI-enhanced input)*
+    - Date & Time
+    - Location
+  - On submission, the event is saved to the database and becomes visible in the admin dashboard.
+
+- **Manage Events**
+  - View a list of all events created by the logged-in admin.
+  - Delete events as needed.
+  - Provides full control over event listings.
+
+---
+
+### User Journey – View & Book Events
+
+- **Browse Events**
+  - Any user (guest or logged in) can view a list of all public events created by different admins.
+
+- **View Event Details**
+  - Click an event to view its:
+    - Description
+    - Date & Time
+    - Location
+
+- **Book Tickets**
+  - Users proceed through a simple booking flow.
+  - Bookings are recorded and acknowledged via confirmation messages.
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer      | Tech Used                                    |
+|------------|-----------------------------------------------|
+| Frontend   | Next.js (App Router), TypeScript, Tailwind CSS |
+| Backend    | Node.js, Express (via `/api` routes)          |
+| Database   | MongoDB                                       |
+
+---
+
+## Future Enhancements
+
+### Ticket Inventory and Availability
+- Set a maximum number of tickets per event.
+- Prevent overbooking and show available tickets in real time.
+
+### Email Notifications
+- Send confirmation emails upon ticket booking and event updates.
+- Use providers like Resend, SendGrid, or Amazon SES.
+
+### User Dashboard
+- Personal area to view:
+  - Upcoming bookings
+  - Past event history
+  - Cancel bookings (if allowed)
+
+### Role-Based Access Control (RBAC)
+- Define roles: Super Admin, Event Manager, User.
+- Enforce access restrictions based on roles.
+
+### Analytics Dashboard for Admins
+- Show metrics like:
+  - Number of tickets booked
+  - Event popularity
+  - Revenue trends
+
+### Payment Gateway Integration
+- Enable paid events with online payments.
+- Support UPI, Cards, Net Banking.
+- Integrate Razorpay, Stripe, or PayPal for secure transactions.
 
 
-## Project Structure
+## Run the Application Locally
+### Clone the Repository
+```bash
+git clone https://github.com/NaveenIHUB/event-management.git
+cd event-management
+```
 
-- `.env` — Environment variables (not committed to Git)
-- `.gitignore` — Git ignore rules
-- `eslint.config.ts` — ESLint configuration
-- `next-env.d.ts` — Next.js TypeScript types (auto-generated)
-- `next.config.ts` — Next.js configuration
-- `package.json` / `package-lock.json` — Project dependencies and scripts
-- `postcss.config.mjs` — PostCSS configuration
-- `README.md` — Project documentation
-- `tailwind.config.ts` — Tailwind CSS configuration
-- `tsconfig.json` — TypeScript configuration
+### Install Dependencies 
+```bash
+npm install
+```
+### Add Environment Variables(.env)
+```bash
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+# NextAuth Authentication Secrets
+NEXTAUTH_SECRET=your_nextauth_secret_key
+NEXTAUTH_URL=http://localhost:3000
+# Frontend API URL (used for fetch calls)
+NEXT_PUBLIC_API_URL=http://localhost:3000/api
+# Cloudinary for Image Uploads
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+# Gemini AI API Key (if you are using Google Gemini AI for content generation)
+GEMINI_API_KEY=your_gemini_api_key
 
-### Folders
+```
 
-- `.next/` — Next.js build output (not committed)
-- `node_modules/` — Installed dependencies (not committed)
-- `public/` — Static assets
-- `src/` — Application source code
-  - `components/` — Reusable UI components
-  - `app/` — Application routes/pages
-  - `types/` — TypeScript types
-  - `lib/` — Utility libraries
-  - `models/` — Data models
-- `uploads/` — User-uploaded files (if used)
+### Start the Development Server
+```bash
+npm run dev
+```
