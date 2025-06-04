@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+1. Admin Journey: Creating and Managing Events
+Admin Login
+The admin logs into the application using their credentials.
+Add Event
+The admin navigates to the "Create Event" page.
+Fills in event details (title, description, date, location, etc.).
+Submits the form to create a new event.
+The event is saved to the database and becomes visible in the admin’s dashboard.
+View Own Events
+The admin can view a list of all events they have created.
+Each event entry may include options to edit or delete the event.
 
-## Getting Started
+2. User Journey: Viewing and Booking Event Tickets
+Browse Events
+Any user (logged in or guest, depending on your app’s rules) can view the list of all available events.
+View Event Details
+The user clicks on an event to see more information (description, date, location, etc.).
+Book Ticket
+The user selects the number of tickets and proceeds to book.
+The booking is confirmed, and the user receives a confirmation (via email or on-screen).
 
-First, run the development server:
+Summary
+Admin: Can create and manage their own events.
+User: Can view all events and book tickets.
+.gitignore: Protects sensitive and unnecessary files from being committed to the repository, ensuring a secure and efficient development process.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `.env` — Environment variables (not committed to Git)
+- `.gitignore` — Git ignore rules
+- `eslint.config.ts` — ESLint configuration
+- `next-env.d.ts` — Next.js TypeScript types (auto-generated)
+- `next.config.ts` — Next.js configuration
+- `package.json` / `package-lock.json` — Project dependencies and scripts
+- `postcss.config.mjs` — PostCSS configuration
+- `README.md` — Project documentation
+- `tailwind.config.ts` — Tailwind CSS configuration
+- `tsconfig.json` — TypeScript configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Folders
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `.next/` — Next.js build output (not committed)
+- `node_modules/` — Installed dependencies (not committed)
+- `public/` — Static assets
+- `src/` — Application source code
+  - `components/` — Reusable UI components
+  - `app/` — Application routes/pages
+  - `types/` — TypeScript types
+  - `lib/` — Utility libraries
+  - `models/` — Data models
+- `uploads/` — User-uploaded files (if used)
