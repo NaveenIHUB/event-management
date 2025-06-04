@@ -49,6 +49,7 @@ A full-stack Event Management platform where **admins** can create and manage ev
 | Frontend   | Next.js (App Router), TypeScript, Tailwind CSS |
 | Backend    | Node.js, Express (via `/api` routes)          |
 | Database   | MongoDB                                       |
+| Image Storage   | Cloudinary                                       |
 
 ---
 
