@@ -29,7 +29,7 @@ Signup  ->  Login  ->  src/app/admin/dashboard/page.tsx  ->  src/app/admin/creat
 
 ### User Journey – View & Book Events  
 ```bash 
-src/app/user/events
+src/app/user/events/page.tsx
 ```
 - **Browse Events**
   - Any user (guest or logged in) can view a list of all public events created by different admins.
