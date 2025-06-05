@@ -45,6 +45,9 @@ src/app/user/events/page.tsx
   - Bookings are recorded and acknowledged via confirmation messages.
 
 ---
+### Flow Diagram
+![Event Management Application - flow diagram](https://github.com/user-attachments/assets/79c60db9-ff7f-4766-975d-04e47b6efcb7)
+
 
 ## 🛠️ Tech Stack
 
