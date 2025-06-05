@@ -6,7 +6,7 @@ A full-stack Event Management platform where **admins** can create and manage ev
 
 ###  Admin Journey – Create & Manage Events
 ```bash 
-Login -> src/app/admin/dashboard/page.tsx
+Signup  ->  Login  ->  src/app/admin/dashboard/page.tsx  ->  src/app/admin/create-event/page.tsx
 ```
 - **Sign Up / Login**
   - Admins can securely register and log in to the platform.
