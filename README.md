@@ -5,7 +5,9 @@ A full-stack Event Management platform where **admins** can create and manage ev
 ## Features
 
 ###  Admin Journey – Create & Manage Events
-
+```bash 
+Login -> src/app/admin/dashboard/page.tsx
+```
 - **Sign Up / Login**
   - Admins can securely register and log in to the platform.
   - Authenticated sessions provide secure access to admin functionalities.
@@ -25,8 +27,10 @@ A full-stack Event Management platform where **admins** can create and manage ev
 
 ---
 
-### User Journey – View & Book Events
-
+### User Journey – View & Book Events  
+```bash 
+src/app/user/events
+```
 - **Browse Events**
   - Any user (guest or logged in) can view a list of all public events created by different admins.
 
